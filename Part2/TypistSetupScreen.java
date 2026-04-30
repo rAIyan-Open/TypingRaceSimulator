@@ -139,6 +139,6 @@ public class TypistSetupScreen {
             isHuman.add(human);
         }
 
-        System.out.println("Starting race with: " + names);
+        new RaceScreen(app, names, isHuman, passage, autocorrect, caffeine, nightShift).show();
     }
 }
