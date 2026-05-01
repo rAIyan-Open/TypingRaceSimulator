@@ -41,6 +41,13 @@ public class TypingRaceApp extends Application {
         sorted.sort((a, b) -> b.getTotalPoints() - a.getTotalPoints());
         return sorted;
     }
+    
+    public void showStatsScreen(List<String> names, List<Double> wpmList,
+                             List<Double> accuracyList, List<Integer> burnoutList,
+                             List<Typist> typists, int winnerIndex, long raceTimeMs) {
+    new StatsScreen(this, names, wpmList, accuracyList, burnoutList,
+                    typists, winnerIndex, raceTimeMs).show();
+    }
 
     public static void main(String[] args) {
         launch(args);
